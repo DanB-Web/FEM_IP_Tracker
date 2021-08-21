@@ -92,6 +92,11 @@
     }
     .header-outputs {
       width: 90%;
+      .header-output-section {
+        p {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }
@@ -118,12 +123,14 @@
   .header-container {
     height: 40vh;
     form {
-      width: 95%;
+      width: 85%;
     }
     .header-outputs {
       width: 85%;
       height: 80%;
+      padding-bottom: 1rem;
       .header-output-section {
+        margin: 0.4rem;
         h2 {
           font-size: 0.6rem;
         }
