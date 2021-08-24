@@ -2,3 +2,9 @@
   height: 70vh;
   z-index: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  #mapid {
+    height: 60vh;
+  }
+}

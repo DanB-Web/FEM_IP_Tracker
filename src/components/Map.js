@@ -19,9 +19,11 @@ const Map = ({ location }) => {
     const mapDiv = document.createElement('div')
     mapDiv.id = 'mapid'
     document.getElementById('map-container').appendChild(mapDiv)
-    //CREATE NEW MAP + TILES
-    const mymap = new L.map('mapid').setView([location.lat, location.long], 13)
+    //CREATE NEW MAP + TILES - NOTE PASS CONFIG OBJ TO REMOVE DEFAULT CONTROLS FROM TL
+    const mymap = new L.map('mapid', { zoomControl: false }).setView([location.lat, location.long], 13)
     L.tileLayer(process.env.REACT_APP_GEO_MAPBOX_URL, mapBoxConfig).addTo(mymap);
+    //MOVE CONTROLS FROM DEFAULT TL TO BR
+    L.control.zoom({position: 'bottomright'}).addTo(mymap)
     //INSERT CUSTOM MARKER
     const marker = L.marker([location.lat, location.long], {icon: svgIcon}).addTo(mymap);
     //CREATE MARKER POPUP

@@ -4,8 +4,8 @@ import { fetchAddress } from './utils/api.js'
 import Header from './components/Header'
 import Map from './components/Map'
 
-import './App.scss'
 import 'normalize.css'
+import './App.scss'
 
 function App() {
 
